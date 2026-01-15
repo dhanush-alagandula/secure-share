@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const File = require('../models/files');
+const File = require('../models/file');
 const path = require('path');
 
 
