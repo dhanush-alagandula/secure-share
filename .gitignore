@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Uploads / user-generated files
+uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Build output (if you add one later)
+dist/
+build/
+
+# Optional: lock files (ONLY ignore if you intentionally don’t want them)
+yarn.lock
+package-lock.json
