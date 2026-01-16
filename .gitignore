@@ -6,8 +6,8 @@ node_modules/
 
 # Uploads / user-generated files
 uploads/*
-
 !uploads/.gitkeep
+
 # Logs
 logs/
 *.log
