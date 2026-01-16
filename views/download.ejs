@@ -1,15 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Download File</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download | InShare - File Sharing Made Easy</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h2>File Ready to Download</h2>
-    <p><strong>Name:</strong>
-        <button>Download</button>
-        </a>
+    <img src="/img/logo.png" alt="icon" class="logo" style="height: 50px; width: 50px; margin: 10px;">
+
+    <section class="download">
+        <img class="download__icon" src="/img/download.svg" alt="download" style="height: 75px;">
+        <% if(locals.error){ %>
+            <h4>
+                <%= locals.error %> 😏
+            </h4>
+            <% } else { %>
+                <h2>Your file is ready to download</h2>
+                <p>Link expires in 24 hours</p>
+                <div class="download__meta">
+                    <h4>
+                        <%= filename %>
+                    </h4>
+                    <small>
+                        <%= parseInt(filesize/1000) %> KB
+                    </small>
+                </div>
+                <div class="send-btn-container">
+                    <a href="<%= downloadLink %>">Download file</a>
+                </div>
+                <% } %>
+    </section>
 </body>
 
 </html>
