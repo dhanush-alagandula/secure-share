@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload | Secure Share - File Sharing Made Easy</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <img src="/img/logo.png" alt="icon" class="logo" style="height: 50px; width: 50px; margin: 10px;">
+
+    <section class="upload">
+        <h2>Share your files</h2>
+        <p>Upload and share files instantly</p>
+
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" name="myfile" id="fileInput" hidden>
+                <img src="/img/download.svg" alt="upload" class="upload__icon">
+                <p>Drag & drop your file here</p>
+                <p class="upload__hint">or</p>
+                <button type="button" class="upload-btn" id="selectBtn">Choose file</button>
+                <p class="upload__limit">Maximum file size: 100MB</p>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <div class="file-info__content">
+                    <span id="fileName"></span>
+                    <span id="fileSize"></span>
+                </div>
+                <button type="button" class="remove-btn" id="removeBtn">×</button>
+            </div>
+
+            <div class="upload-progress" id="uploadProgress" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Uploading...</p>
+            </div>
+
+            <div class="result" id="result" style="display: none;">
+                <div class="result__success">
+                    <h3>✓ File uploaded successfully!</h3>
+                    <div class="result__link">
+                        <input type="text" id="shareLink" readonly>
+                        <button type="button" class="copy-btn" id="copyBtn">Copy</button>
+                    </div>
+                    <div class="email-section" id="emailSection">
+                        <h4>Send via email</h4>
+                        <div class="email-form">
+                            <input type="email" id="emailFrom" placeholder="Your email" required>
+                            <input type="email" id="emailTo" placeholder="Recipient email" required>
+                            <button type="button" class="send-btn" id="sendBtn">Send</button>
+                        </div>
+                        <p class="email-status" id="emailStatus"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+        </form>
+    </section>
+
+    <script src="/js/upload.js"></script>
+</body>
+
+</html>
