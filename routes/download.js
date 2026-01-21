@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const File = require('../models/file');
 const path = require('path');
+const fs = require('fs');
 
 
 router.get('/:uuid', async (req, res) => {
@@ -11,6 +12,12 @@ router.get('/:uuid', async (req, res) => {
         }
 
         const filePath = path.join(__dirname, '..', file.path);
+
+        // If the file has been removed from disk, return an error instead of throwing
+        if (!fs.existsSync(filePath)) {
+            return res.render('download', { error: 'File is no longer available 😔😔' });
+        }
+
         res.download(filePath);
     } catch (err) {
         return res.render('download', { error: 'Something went wrong' });

@@ -9,7 +9,7 @@ connectDB();
 
 //use cors
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
+    origin: process.env.ALLOWED_CLIENTS ? process.env.ALLOWED_CLIENTS.split(',') : '*'
 };
 app.use(cors(corsOptions));
 
@@ -21,8 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
-// Serve uploaded files statically
-app.use('/uploads', express.static('uploads'));
 // Routes
 app.use('/api/files', require('./routes/files'));
 app.use('/files', require('./routes/show'));
