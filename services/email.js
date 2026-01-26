@@ -1,27 +1,22 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
-async function sendEmail({ from, to, subject, text, html }) {
-    let transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST,
-        port: Number(process.env.EMAIL_PORT),
-        secure: true,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        },
-        connectionTimeout: 10000, // 10 seconds
-        greetingTimeout: 10000, // 10 seconds
-        socketTimeout: 10000 // 10 seconds
-    });
+const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    secure: false,
+    auth: {
+        user: "apikey",
+        pass: process.env.EMAIL_PASS
+    }
+});
 
-    let info = await transporter.sendMail({
-        from,
+async function sendEmail({ to, subject, html }) {
+    await transporter.sendMail({
+        from: "Secure Share <qz77120@gmail.com>",
         to,
         subject,
-        text,
         html
     });
-
 }
 
 module.exports = sendEmail;
