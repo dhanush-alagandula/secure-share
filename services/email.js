@@ -10,7 +10,7 @@ async function sendEmail({ to, emailFrom, downloadLink, size, expires, fileName 
             expiry_time: expires,
             download_link: downloadLink,
             secure_share: process.env.APP_BASE_URL,
-            receiver_email: toolbar
+            receiver_email: to
         };
 
         const result = await emailjs.send(
