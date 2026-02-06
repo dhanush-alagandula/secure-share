@@ -67,16 +67,12 @@ router.post('/send', async (req, res) => {
         //send email
         const sendMail = require('../services/email');
         await sendMail({
-            from: emailFrom,
             to: emailTo,
-            subject: 'File Sharing',
-            text: `${emailFrom} shared a file with you.`,
-            html: require('../services/emailTemplate')({
-                emailFrom: emailFrom,
-                downloadLink: `${process.env.APP_BASE_URL}/files/${file.uuid}`,
-                size: (file.size / 1000).toFixed(2) + ' KB',
-                expires: '24 hours'
-            })
+            emailFrom: emailFrom,
+            downloadLink: `${process.env.APP_BASE_URL}/files/${file.uuid}`,
+            size: (file.size / 1000).toFixed(2) + ' KB',
+            expires: '24 hours',
+            fileName: file.filenamee
         });
         return res.send({ success: true });
     } catch (err) {

@@ -1,27 +1,33 @@
-const nodemailer = require('nodemailer');
+const emailjs = require('@emailjs/nodejs');
 
-async function sendEmail({ from, to, subject, text, html }) {
-    let transporter = nodemailer.createTransport({
-        host: process.env.EMAIL_HOST,
-        port: Number(process.env.EMAIL_PORT),
-        secure: true,
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        },
-        connectionTimeout: 10000, // 10 seconds
-        greetingTimeout: 10000, // 10 seconds
-        socketTimeout: 10000 // 10 seconds
-    });
+async function sendEmail({ to, emailFrom, downloadLink, size, expires, fileName }) {
+    try {
+        const templateParams = {
+            website_link: process.env.APP_BASE_URL,
+            sender_email: emailFrom,
+            file_name: fileName,
+            file_size: size,
+            expiry_time: expires,
+            download_link: downloadLink,
+            secure_share: process.env.APP_BASE_URL,
+            receiver_email: toolbar
+        };
 
-    let info = await transporter.sendMail({
-        from,
-        to,
-        subject,
-        text,
-        html
-    });
+        const result = await emailjs.send(
+            process.env.EMAILJS_SERVICE_ID,
+            process.env.EMAILJS_TEMPLATE_ID,
+            templateParams,
+            {
+                publicKey: process.env.EMAILJS_PUBLIC_KEY,
+                privateKey: process.env.EMAILJS_PRIVATE_KEY
+            }
+        );
 
+        console.log('Email sent successfully:', result);
+    } catch (error) {
+        console.error('EmailJS error details:', error);
+        throw new Error(`Failed to send email via EmailJS: ${error.message || error}`);
+    }
 }
 
 module.exports = sendEmail;

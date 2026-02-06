@@ -1,0 +1,119 @@
+[33mcommit c95410dc0d65a8948366ac14d57dc85c5f9add41[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/v1[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Mon Jan 26 22:39:49 2026 +0530
+
+    Fixed SMTP issue
+
+[33mcommit 7c3e19fc8b1c456eb46789731817805a33042c99[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Sun Jan 25 16:08:28 2026 +0530
+
+    Fixed SMTP issue
+
+[33mcommit d5d087e39dc19c67595c4f24e1289d7e148ce9ae[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 23 12:14:16 2026 +0530
+
+    Fixed Deployment issue
+
+[33mcommit 2d2c8bfecd2bbaed814aa6c6e2b48dd9187964fe[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 23 12:05:04 2026 +0530
+
+    Fixed Deployment issue
+
+[33mcommit 7113bf42654c6afd643cd9129d7d6d65b6ec36b3[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 23 10:32:12 2026 +0530
+
+    Added start script
+
+[33mcommit 963c1eb665507d2f9a1df11a3bc8dd0e7a9637cc[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Thu Jan 22 21:45:06 2026 +0530
+
+    fixed cleanUp.js
+
+[33mcommit 8b3c2ddcf683773e07e29ade28c5a2d55073bb5a[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Wed Jan 21 21:54:43 2026 +0530
+
+    Fixed Minor Errors
+
+[33mcommit 834116350700caef4570ebf15cedfd5091b07069[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Wed Jan 21 00:47:00 2026 +0530
+
+    Added frontend
+
+[33mcommit 896311f773be85d73b05ddbbf46bf23b4f328546[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Sun Jan 18 22:24:21 2026 +0530
+
+    Added cleanUp.js
+
+[33mcommit 4995cd6bc94d0f51b017889a3963cc2d8b5c8834[m
+Author: dhanush-alagandula <dhanushalagandula@gmail.com>
+Date:   Sat Jan 17 19:37:20 2026 +0530
+
+    Add MIT License to the project
+
+[33mcommit 23ac6a4019a760d2f7cf517f67748de03ca80bd2[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Sat Jan 17 19:30:03 2026 +0530
+
+    Added README.md
+
+[33mcommit b50bbdb3213160e68f6ca60ad086df18610e29d4[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 20:25:15 2026 +0530
+
+    minor fixes
+
+[33mcommit 1fcc69b94cac160bb31c8dedb141be32a62e291a[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 19:57:39 2026 +0530
+
+    Added uploads folder
+
+[33mcommit de30e776f47a5c8fa1d0f2c2d5fbc7d647bb67a0[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 19:54:54 2026 +0530
+
+    Bug Fix
+
+[33mcommit b74584a7b4bfec853a26335b56c432f71e272f52[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 17:23:35 2026 +0530
+
+    Added scheduled cleanUp feature
+
+[33mcommit 2992ae945c373d13191a0d8a2bfad83fc5ee304b[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 17:15:05 2026 +0530
+
+    Added cors
+
+[33mcommit 9a6f10ad17c03c178e9d2315ab641aa882bef450[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 16:43:35 2026 +0530
+
+    Added Download page and Fixed Minor bugs
+
+[33mcommit bdf56220c8b4838ee7f3e4b03f5555741eb4769e[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Fri Jan 16 00:30:32 2026 +0530
+
+    Email send checkpoint
+
+[33mcommit bcff7f74a8a0fca79546f79bbda4a59641dc144c[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Thu Jan 15 23:32:03 2026 +0530
+
+    File download Checkpoint
+
+[33mcommit b370041184e8f010914fcb92049d6a5a21815fbf[m
+Author: Dhanush Alagandula <dhanushalagandula@gmail.com>
+Date:   Thu Jan 15 21:23:05 2026 +0530
+
+    File upload checkpoint
